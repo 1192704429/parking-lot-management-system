@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.car.api.dao.OrderInfoDao">
+
+    <select id="findList" parameterType="com.car.api.dto.OrderInfoDTO" resultType="com.car.api.dto.OrderInfoDTO">
+        select
+        orderInfo.*
+        from order_info orderInfo
+        left join proprietor proprietor on orderInfo.user_id = proprietor.id
+        <where>
+            <if test="id != null and id != ''">and orderInfo.id = #{id}</if>
+            <if test="userId != null and userId != ''">and orderInfo.user_id = #{userId}</if>
+            <if test="carNumber != null and carNumber != ''">and orderInfo.car_number like concat('%',#{carNumber},'%')</if>
+            <if test="inTime != null and inTime != ''">and orderInfo.in_time = #{inTime}</if>
+            <if test="outTime != null and outTime != ''">and orderInfo.out_time = #{outTime}</if>
+            <if test="money != null and money != ''">and orderInfo.money = #{money}</if>
+            <if test="status != null and status != ''">and orderInfo.status = #{status}</if>
+            <if test="hour != null and hour != ''">and orderInfo.hour = #{hour}</if>
+            <if test="createTime != null and createTime != ''">and orderInfo.create_time = #{createTime}</if>
+        </where>
+        order by id desc
+        <if test="current != null and pageSize != null">
+            limit #{current},#{pageSize}
+        </if>
+    </select>
+
+    <select id="findPageCount" parameterType="com.car.api.dto.OrderInfoDTO" resultType="java.lang.Integer">
+        select count(*) from order_info orderInfo
+        left join proprietor proprietor on orderInfo.user_id = proprietor.id
+        <where>
+            <if test="id != null and id != ''">and orderInfo.id = #{id}</if>
+            <if test="userId != null and userId != ''">and orderInfo.user_id = #{userId}</if>
+            <if test="carNumber != null and carNumber != ''">and orderInfo.car_number like concat('%',#{carNumber},'%')</if>
+            <if test="inTime != null and inTime != ''">and orderInfo.in_time = #{inTime}</if>
+            <if test="outTime != null and outTime != ''">and orderInfo.out_time = #{outTime}</if>
+            <if test="money != null and money != ''">and orderInfo.money = #{money}</if>
+            <if test="status != null and status != ''">and orderInfo.status = #{status}</if>
+            <if test="hour != null and hour != ''">and orderInfo.hour = #{hour}</if>
+            <if test="createTime != null and createTime != ''">and orderInfo.create_time = #{createTime}</if>
+        </where>
+    </select>
+
+</mapper>

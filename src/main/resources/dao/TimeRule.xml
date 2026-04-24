@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.car.api.dao.TimeRuleDao">
+
+    <select id="findList" parameterType="com.car.api.dto.TimeRuleDTO" resultType="com.car.api.dto.TimeRuleDTO">
+        select
+        timeRule.*
+        from time_rule timeRule
+        <where>
+            <if test="id != null and id != ''">and timeRule.id = #{id}</if>
+            <if test="hour != null and hour != ''">and timeRule.hour = #{hour}</if>
+            <if test="money != null and money != ''">and timeRule.money = #{money}</if>
+            <if test="createTime != null and createTime != ''">and timeRule.create_time = #{createTime}</if>
+        </where>
+        <if test="current != null and pageSize != null">
+            limit #{current},#{pageSize}
+        </if>
+    </select>
+
+    <select id="findPageCount" parameterType="com.car.api.dto.TimeRuleDTO" resultType="java.lang.Integer">
+        select count(*) from time_rule timeRule
+        <where>
+            <if test="id != null and id != ''">and timeRule.id = #{id}</if>
+            <if test="hour != null and hour != ''">and timeRule.hour = #{hour}</if>
+            <if test="money != null and money != ''">and timeRule.money = #{money}</if>
+            <if test="createTime != null and createTime != ''">and timeRule.create_time = #{createTime}</if>
+        </where>
+    </select>
+
+</mapper>

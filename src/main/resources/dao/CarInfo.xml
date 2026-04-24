@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.car.api.dao.CarInfoDao">
+
+    <select id="findList" parameterType="com.car.api.dto.CarInfoDTO" resultType="com.car.api.dto.CarInfoDTO">
+        select
+        carInfo.*,
+        proprietor.name
+        from car_info carInfo
+        left join proprietor proprietor on carInfo.user_id = proprietor.id
+        <where>
+            <if test="id != null and id != ''">and carInfo.id = #{id}</if>
+            <if test="carImg != null and carImg != ''">and carInfo.car_img = #{carImg}</if>
+            <if test="userId != null and userId != ''">and carInfo.user_id = #{userId}</if>
+            <if test="carNumber != null and carNumber != ''">and carInfo.car_number = #{carNumber}</if>
+            <if test="vehicle != null and vehicle != ''">and carInfo.vehicle = #{vehicle}</if>
+            <if test="createTime != null and createTime != ''">and carInfo.create_time = #{createTime}</if>
+            <if test="name != null and name != ''">and proprietor.name like concat('%',#{name},'%')</if>
+        </where>
+        <if test="current != null and pageSize != null">
+            limit #{current},#{pageSize}
+        </if>
+    </select>
+
+    <select id="findPageCount" parameterType="com.car.api.dto.CarInfoDTO" resultType="java.lang.Integer">
+        select count(*) from car_info carInfo
+        left join proprietor proprietor on carInfo.user_id = proprietor.id
+        <where>
+            <if test="id != null and id != ''">and carInfo.id = #{id}</if>
+            <if test="carImg != null and carImg != ''">and carInfo.car_img = #{carImg}</if>
+            <if test="userId != null and userId != ''">and carInfo.user_id = #{userId}</if>
+            <if test="carNumber != null and carNumber != ''">and carInfo.car_number = #{carNumber}</if>
+            <if test="vehicle != null and vehicle != ''">and carInfo.vehicle = #{vehicle}</if>
+            <if test="createTime != null and createTime != ''">and carInfo.create_time = #{createTime}</if>
+            <if test="name != null and name != ''">and proprietor.name like concat('%',#{name},'%')</if>
+        </where>
+    </select>
+
+</mapper>

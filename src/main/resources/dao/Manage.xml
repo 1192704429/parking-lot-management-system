@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.car.api.dao.ManageDao">
+
+    <select id="findList" parameterType="com.car.api.dto.ManageDTO" resultType="com.car.api.dto.ManageDTO">
+        select
+        manage.*
+        from manage manage
+        <where>
+            <if test="id != null and id != ''">and manage.id = #{id}</if>
+            <if test="username != null and username != ''">and manage.username = #{username}</if>
+            <if test="password != null and password != ''">and manage.password = #{password}</if>
+            <if test="headImg != null and headImg != ''">and manage.head_img = #{headImg}</if>
+            <if test="nickname != null and nickname != ''">and manage.nickname like concat('%',#{nickname},'%')</if>
+            <if test="createTime != null and createTime != ''">and manage.create_time = #{createTime}</if>
+        </where>
+        <if test="current != null and pageSize != null">
+            limit #{current},#{pageSize}
+        </if>
+    </select>
+
+    <select id="findPageCount" parameterType="com.car.api.dto.ManageDTO" resultType="java.lang.Integer">
+        select count(*) from manage manage
+        <where>
+            <if test="id != null and id != ''">and manage.id = #{id}</if>
+            <if test="username != null and username != ''">and manage.username = #{username}</if>
+            <if test="password != null and password != ''">and manage.password = #{password}</if>
+            <if test="headImg != null and headImg != ''">and manage.head_img = #{headImg}</if>
+            <if test="nickname != null and nickname != ''">and manage.nickname like concat('%',#{nickname},'%')</if>
+            <if test="createTime != null and createTime != ''">and manage.create_time = #{createTime}</if>
+        </where>
+    </select>
+
+</mapper>

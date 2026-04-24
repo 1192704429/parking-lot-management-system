@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.car.api.dao.SuggestDao">
+
+    <select id="findList" parameterType="com.car.api.dto.SuggestDTO" resultType="com.car.api.dto.SuggestDTO">
+        select
+        suggest.*,
+        proprietor.name
+        from suggest suggest
+        left join proprietor proprietor on suggest.user_id = proprietor.id
+        <where>
+            <if test="id != null and id != ''">and suggest.id = #{id}</if>
+            <if test="userId != null and userId != ''">and suggest.user_id = #{userId}</if>
+            <if test="content != null and content != ''">and suggest.content = #{content}</if>
+            <if test="answer != null and answer != ''">and suggest.answer = #{answer}</if>
+            <if test="status != null and status != ''">and suggest.status = #{status}</if>
+            <if test="createTime != null and createTime != ''">and suggest.create_time = #{createTime}</if>
+            <if test="title != null and title != ''">and suggest.title like concat('%',#{title},'%')</if>
+            <if test="name != null and name != ''">and proprietor.name like concat('%',#{name},'%')</if>
+        </where>
+        <if test="current != null and pageSize != null">
+            limit #{current},#{pageSize}
+        </if>
+    </select>
+
+    <select id="findPageCount" parameterType="com.car.api.dto.SuggestDTO" resultType="java.lang.Integer">
+        select count(*) from suggest suggest
+        left join proprietor proprietor on suggest.user_id = proprietor.id
+        <where>
+            <if test="id != null and id != ''">and suggest.id = #{id}</if>
+            <if test="userId != null and userId != ''">and suggest.user_id = #{userId}</if>
+            <if test="content != null and content != ''">and suggest.content = #{content}</if>
+            <if test="answer != null and answer != ''">and suggest.answer = #{answer}</if>
+            <if test="status != null and status != ''">and suggest.status = #{status}</if>
+            <if test="createTime != null and createTime != ''">and suggest.create_time = #{createTime}</if>
+            <if test="title != null and title != ''">and suggest.title like concat('%',#{title},'%')</if>
+            <if test="name != null and name != ''">and proprietor.name like concat('%',#{name},'%')</if>
+        </where>
+    </select>
+
+</mapper>
