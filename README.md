@@ -16,7 +16,7 @@
 | 物业管理端 | 管理员 |
 
 
-![功能模块图](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/azhou_promotion/img/module_structure/func_module_60fe619671c54330be8d83eae8acd7c7.png)
+![功能模块图](docs/images/01-func-module.png)
 
 
 ## 三、技术栈说明
@@ -49,59 +49,59 @@
 
 注册页：填写注册信息，完成社区车辆管理小程序注册
 
-![注册页：填写注册信息，完成社区车辆管理小程序注册](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-24/33348597-5a0c-4322-8a54-63d0bdc556c4.jpg)
+![注册页：填写注册信息，完成社区车辆管理小程序注册](docs/images/02-zhu-ce.png)
 
 登录页：输入账号密码，登录社区车辆管理小程序
 
-![登录页：输入账号密码，登录社区车辆管理小程序](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-24/74f0c3c7-51b7-460e-87f6-3e6e9ffdb3c7.jpg)
+![登录页：输入账号密码，登录社区车辆管理小程序](docs/images/03-deng-lu.png)
 
 首页：提供车辆出入场入口，展示停车收费标准
 
-![首页：提供车辆出入场入口，展示停车收费标准](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-24/90e05026-407c-4cd6-83d6-4f14bae50dac.jpg)
+![首页：提供车辆出入场入口，展示停车收费标准](docs/images/04-shou-ye.png)
 
 菜单页：提供各类停车相关功能的快捷入口
 
-![菜单页：提供各类停车相关功能的快捷入口](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-24/41f89eeb-c04d-4f50-830b-11bd131c7e72.jpg)
+![菜单页：提供各类停车相关功能的快捷入口](docs/images/05-cai-dan.png)
 
 公告列表页：展示社区各类公告，供用户查看
 
-![公告列表页：展示社区各类公告，供用户查看](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-24/204858d2-82e4-4f02-8cfa-71f0d383165a.jpg)
+![公告列表页：展示社区各类公告，供用户查看](docs/images/06-gong-gao-lie-biao.png)
 
 公告详情页：查看社区发布的秋季运动会公告详情
 
-![公告详情页：查看社区发布的秋季运动会公告详情](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-24/71b454fb-db19-423e-8239-acf4dc5c014c.jpg)
+![公告详情页：查看社区发布的秋季运动会公告详情](docs/images/07-gong-gao-xiang-qing.png)
 
 车位查询页：查看所有车位的编号和当前空闲状态
 
-![车位查询页：查看所有车位的编号和当前空闲状态](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-24/bd2d1590-9cd1-49c1-848c-c45737699141.jpg)
+![车位查询页：查看所有车位的编号和当前空闲状态](docs/images/08-che-wei-cha-xun.png)
 
 出入场记录页：展示车辆停车出入场历史记录，支持搜索查询
 
-![出入场记录页：展示车辆停车出入场历史记录，支持搜索查询](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-24/4f30d8b8-478c-4820-8f51-eb07127bbcb0.jpg)
+![出入场记录页：展示车辆停车出入场历史记录，支持搜索查询](docs/images/09-chu-ru-chang-ji-lu.png)
 
 模拟缴费页：展示车辆出场信息，待用户缴纳停车费用
 
-![模拟缴费页：展示车辆出场信息，待用户缴纳停车费用](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-24/29e9836f-a2e5-4bb3-8fb3-9b344e3401ff.jpg)
+![模拟缴费页：展示车辆出场信息，待用户缴纳停车费用](docs/images/10-mo-ni-jiao-fei.png)
 
 意见反馈列表页：查看已提交的意见反馈及处理结果
 
-![意见反馈列表页：查看已提交的意见反馈及处理结果](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-24/f5ef37a2-5bbb-4ece-835c-e661e0b380ee.jpg)
+![意见反馈列表页：查看已提交的意见反馈及处理结果](docs/images/11-yi-jian-fan-kui-lie-biao.png)
 
 个人中心页：展示个人中心快捷功能，管理个人及车辆信息
 
-![个人中心页：展示个人中心快捷功能，管理个人及车辆信息](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-24/14cb5671-da20-498f-83c4-52f4074b1654.jpg)
+![个人中心页：展示个人中心快捷功能，管理个人及车辆信息](docs/images/12-ge-ren-zhong-xin.png)
 
 个人信息修改页：修改个人信息，修改完成后提交更新
 
-![个人信息修改页：修改个人信息，修改完成后提交更新](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-24/b5a4db31-5b87-4754-8f21-9789bf9e434a.jpg)
+![个人信息修改页：修改个人信息，修改完成后提交更新](docs/images/13-ge-ren-xin-xi-xiu-gai.png)
 
 密码修改页：用户在此修改个人账户的登录密码
 
-![密码修改页：用户在此修改个人账户的登录密码](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-24/a689e22d-0837-4707-82e1-425dc5385d2d.jpg)
+![密码修改页：用户在此修改个人账户的登录密码](docs/images/14-mi-ma-xiu-gai.png)
 
 车辆管理页：管理个人已绑定车辆，支持新增删除设置常用车
 
-![车辆管理页：管理个人已绑定车辆，支持新增删除设置常用车](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-24/ed109e91-b3a3-478f-8d77-8dc15cd42ef7.jpg)
+![车辆管理页：管理个人已绑定车辆，支持新增删除设置常用车](docs/images/15-che-liang-guan-li.png)
 
 
 ###### 物业管理端
@@ -123,39 +123,39 @@
 
 登录页：输入账号密码，登录社区车辆管理系统
 
-![登录页：输入账号密码，登录社区车辆管理系统](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-24/36df7fb6-4c85-403c-87e9-508411e03f71.jpg)
+![登录页：输入账号密码，登录社区车辆管理系统](docs/images/16-deng-lu.png)
 
 公告管理页：管理社区公告，支持增删改查搜索操作
 
-![公告管理页：管理社区公告，支持增删改查搜索操作](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-24/ee8f43b5-fcda-47cf-8c52-dff7ca790450.jpg)
+![公告管理页：管理社区公告，支持增删改查搜索操作](docs/images/17-gong-gao-guan-li.png)
 
 公告编辑页：对已有的社区公告进行修改编辑
 
-![公告编辑页：对已有的社区公告进行修改编辑](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-24/c3fb3bc0-1b4b-4227-8e1a-18dbf3777130.jpg)
+![公告编辑页：对已有的社区公告进行修改编辑](docs/images/18-gong-gao-bian-ji.png)
 
 业主信息管理页：管理业主信息，支持搜索增删改操作
 
-![业主信息管理页：管理业主信息，支持搜索增删改操作](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-24/de4b9f6b-6bf2-49f9-8b43-4e647a4f3ee3.jpg)
+![业主信息管理页：管理业主信息，支持搜索增删改操作](docs/images/19-ye-zhu-xin-xi-guan-li.png)
 
 车辆信息管理页：管理小区车辆信息，支持搜索增删改操作
 
-![车辆信息管理页：管理小区车辆信息，支持搜索增删改操作](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-24/4cda9af1-cc03-4104-89d4-ea8e8fd15afc.jpg)
+![车辆信息管理页：管理小区车辆信息，支持搜索增删改操作](docs/images/20-che-liang-xin-xi-guan-li.png)
 
 车位管理：查看并管理系统内所有车位信息
 
-![车位管理：查看并管理系统内所有车位信息](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-24/aef514fc-af6b-477f-89b7-0df1826f3b8c.jpg)
+![车位管理：查看并管理系统内所有车位信息](docs/images/21-che-wei-guan-li.png)
 
 出入场记录管理：查看并管理车辆出入场的停车记录
 
-![出入场记录管理：查看并管理车辆出入场的停车记录](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-24/2fd8cd35-70a7-4c3b-8853-2aac31badc57.jpg)
+![出入场记录管理：查看并管理车辆出入场的停车记录](docs/images/22-chu-ru-chang-ji-lu-guan-li.png)
 
 收费规则管理：管理社区停车收费规则，支持增删改查操作
 
-![收费规则管理：管理社区停车收费规则，支持增删改查操作](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-24/2f1c9ba1-a338-47e3-8aeb-d4a36c33cd99.jpg)
+![收费规则管理：管理社区停车收费规则，支持增删改查操作](docs/images/23-shou-fei-gui-ze-guan-li.png)
 
 意见反馈管理页：查看并处理业主提交的意见反馈
 
-![意见反馈管理页：查看并处理业主提交的意见反馈](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-24/24387921-e854-4a9e-88f7-b6b29bbedda3.jpg)
+![意见反馈管理页：查看并处理业主提交的意见反馈](docs/images/24-yi-jian-fan-kui-guan-li.png)
 
 
 ## 五、主要业务流程
